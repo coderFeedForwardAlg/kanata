@@ -6,12 +6,12 @@
 
 (defsrc
 	a s d f
-	j k l
+	j k l caps 
 )
 
 (defvar 
 	tap-time 200
-	hold-time 200
+	hold-time 150
 )
 
 (defalias
@@ -25,8 +25,10 @@
 	k-mod (tap-hold $tap-time $hold-time k rsft)
 	l-mod (tap-hold $tap-time $hold-time l ralt)
 )
-(deflayer base 
-	@a-mod @s-mod @d-mod @f-mod @j-mod @k-mod @l-mod
-)
 
+(deflayer base 
+	@a-mod @s-mod @d-mod @f-mod @j-mod @k-mod @l-mod esc
+)
+(deflayermap (base-layer)
+  caps esc)
 
